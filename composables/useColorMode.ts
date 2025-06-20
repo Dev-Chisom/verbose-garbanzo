@@ -32,10 +32,13 @@ export function useColorMode() {
   
   const updateColorMode = () => {
     if (process.client) {
-      // Remove both classes first to ensure clean state
-      document.documentElement.classList.remove('light', 'dark')
-      // Add appropriate class
-      document.documentElement.classList.add(isDark.value ? 'dark' : 'light')
+      // Use requestAnimationFrame for smoother transitions
+      requestAnimationFrame(() => {
+        // Remove both classes first to ensure clean state
+        document.documentElement.classList.remove('light', 'dark')
+        // Add appropriate class
+        document.documentElement.classList.add(isDark.value ? 'dark' : 'light')
+      })
     }
   }
   

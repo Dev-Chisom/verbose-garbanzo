@@ -9,13 +9,8 @@
 
 <script setup>
 import { useFirebaseAuth } from '~/composables/useFirebaseAuth'
-import { useColorMode } from '~/composables/useColorMode'
 
 // Initialize authentication
 const { initializeAuth } = useFirebaseAuth()
 initializeAuth()
-
-// Initialize color mode
-const { initColorMode } = useColorMode()
-initColorMode()
 </script>

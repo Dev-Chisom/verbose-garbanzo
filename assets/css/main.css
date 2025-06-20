@@ -5,11 +5,30 @@
 @layer base {
   html {
     @apply scroll-smooth antialiased;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  html.light {
+    color-scheme: light;
   }
   
   body {
     @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
-    @apply transition-colors duration-200;
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  /* Add transitions to all elements that change with theme */
+  * {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+  
+  /* Exclude certain elements from transitions */
+  img, svg, video, canvas, audio, iframe, embed, object {
+    @apply transition-none;
   }
   
   h1, h2, h3, h4, h5, h6 {
