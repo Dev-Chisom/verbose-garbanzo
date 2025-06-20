@@ -1,14 +1,7 @@
 {
-  "framework": "nuxt",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "functions": {
-    "app/server/api/**/*.ts": {
-      "runtime": "nodejs18.x"
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
-  },
-  "env": {
-    "NODE_ENV": "production"
   }
 } 
