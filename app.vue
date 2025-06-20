@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col">
+    <ColorScheme />
     <NuxtLayout>
       <NuxtLoadingIndicator color="#2563EB" />
       <NuxtPage />
